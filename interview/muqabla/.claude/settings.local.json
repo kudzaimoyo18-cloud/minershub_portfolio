@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(npx next build:*)",
+      "Bash(curl:*)",
+      "Bash(npm install:*)",
+      "mcp__d0594e74-5c20-443c-bd9a-3a28d28e5155__apply_migration",
+      "mcp__d0594e74-5c20-443c-bd9a-3a28d28e5155__execute_sql",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}
