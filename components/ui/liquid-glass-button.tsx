@@ -380,3 +380,4 @@ export const MetalButton = React.forwardRef<
 });
 
 MetalButton.displayName = "MetalButton";
+export { LiquidButton };
