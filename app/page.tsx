@@ -1,14 +1,14 @@
 "use client";
 
-import { Globe } from "@/components/ui/globe";
 import { MetalButton, LiquidButton } from "@/components/ui/liquid-glass-button";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 import { useState } from "react";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'hydro' | 'air' | 'immersion'>('hydro');
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <AuroraBackground>
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,12 +77,6 @@ export default function Home() {
                   <div className="text-gray-400 text-sm">Support</div>
                 </div>
               </div>
-            </div>
-
-            {/* Globe */}
-            <div className="relative h-[600px] flex items-center justify-center">
-              <Globe />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
             </div>
           </div>
         </div>
@@ -455,6 +449,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+    </AuroraBackground>
   );
 }
