@@ -5,10 +5,9 @@ import { useCallback, useEffect, useRef, useState } from "react"
 
 import { cn } from "@/lib/utils"
 
-const GLOBE_CONFIG: COBEOptions = {
+const GLOBE_CONFIG = {
   width: 800,
   height: 800,
-  onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,
