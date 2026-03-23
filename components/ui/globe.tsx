@@ -1,6 +1,6 @@
 "use client"
 
-import createGlobe, { COBEOptions } from "cobe"
+import createGlobe, { type COBEOptions } from "cobe"
 import { useCallback, useEffect, useRef, useState } from "react"
 
 import { cn } from "@/lib/utils"
@@ -15,9 +15,9 @@ const GLOBE_CONFIG = {
   diffuse: 0.4,
   mapSamples: 16000,
   mapBrightness: 1.2,
-  baseColor: [1, 1, 1] as [number, number, number],
-  markerColor: [251 / 255, 100 / 255, 21 / 255] as [number, number, number],
-  glowColor: [1, 1, 1] as [number, number, number],
+  baseColor: [1, 1, 1],
+  markerColor: [251 / 255, 100 / 255, 21 / 255],
+  glowColor: [1, 1, 1],
   markers: [
     { location: [24.4539, 54.3773], size: 0.15 }, // UAE
     { location: [21.5126, 55.9233], size: 0.12 }, // Oman
@@ -27,7 +27,7 @@ const GLOBE_CONFIG = {
     { location: [20.5937, 78.9629], size: 0.08 },  // India
     { location: [30.3753, 69.3451], size: 0.06 },  // Afghanistan
     { location: [34.8021, 38.9968], size: 0.06 },  // Syria
-    { location: [32.8872, 13.1913], size: 0.06 },  // Libya
+    { location: [41.0082, 28.9784], size: 0.06 },  // Turkey
     { location: [26.8206, 30.8025], size: 0.06 },  // Egypt
   ],
 }
@@ -37,7 +37,7 @@ export function Globe({
   config = GLOBE_CONFIG,
 }: {
   className?: string
-  config?: COBEOptions
+  config?: any
 }) {
   let phi = 0
   let width = 0
