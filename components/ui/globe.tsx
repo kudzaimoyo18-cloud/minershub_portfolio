@@ -109,6 +109,7 @@ export function Globe({
         ref={canvasRef}
         style={{
           filter: "drop-shadow(0 0 40px rgba(255, 215, 0, 0.3))", // Gold glow effect (#FFD700)
+          cursor: "grab",
         }}
         onPointerDown={(e) =>
           updatePointerInteraction(
