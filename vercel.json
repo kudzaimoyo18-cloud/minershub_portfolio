@@ -1,45 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "frontend/customer/index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "frontend/kitchen/index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "api/**/*.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/customer",
-      "dest": "/frontend/customer/index.html"
-    },
-    {
-      "src": "/kitchen",
-      "dest": "/frontend/kitchen/index.html"
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/index.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/customer/index.html"
-    }
-  ],
-  "env": {
-    "DB_HOST": "@db-host",
-    "DB_USER": "@db-user",
-    "DB_PASSWORD": "@db-password",
-    "DB_NAME": "@db-name",
-    "N8N_BASE_URL": "@n8n-base-url",
-    "ANTHROPIC_API_KEY": "@anthropic-api-key"
-  },
-  "buildCommand": "pip install -r requirements_wahat.txt",
-  "installCommand": "pip install -r requirements_wahat.txt"
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "ignoreCommand": "echo 'No install command needed'",
+  "installCommand": "npm install"
 }
